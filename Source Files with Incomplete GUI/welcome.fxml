@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:controller="guiController"  id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="297.0" prefWidth="300.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+  <children>
+     <Button onAction="#testClicked" font="$x1" layoutX="87.0" layoutY="120.0"  prefWidth="137.0" text="New Test">
+      <font>
+        <Font name="DejaVu Sans ExtraLight" size="13.0" fx:id="x1" />
+      </font>
+    </Button>
+    <Button font="$x1" onAction="#performanceClicked" layoutX="87.0" layoutY="222.0" prefWidth="137.0" text="Performance" />
+      
+    <Button font="$x1" onAction="#aggregateClicked" layoutX="87.0" layoutY="171.0" prefWidth="137.0" text="Aggregate" />
+   
+    <Text font="$x1" layoutX="115.0" layoutY="56.0" scaleX="2.303592616332329" scaleY="2.8502839201898875" strokeType="OUTSIDE" strokeWidth="0.0" text="Quzify 1.0" />
+  </children>
+</AnchorPane>

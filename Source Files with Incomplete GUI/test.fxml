@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane2" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="489.0000999999975" prefWidth="321.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="guiController">
+  <children>
+    <Text layoutX="39.0" layoutY="46.0" scaleX="1.3251667231049713" scaleY="1.6608156496172024" strokeType="OUTSIDE" strokeWidth="0.0" text="Quzify 1.0">
+      <font>
+        <Font name="DejaVu Sans ExtraLight" size="13.0" fx:id="x1" />
+      </font>
+    </Text>
+    <Text font="$x1" layoutX="19.0" layoutY="112.0" scaleX="0.8430422725254216" scaleY="1.340694929776141" strokeType="OUTSIDE" strokeWidth="0.0" text="What is answer to this sample question?" />
+    <RadioButton disable="false" focusTraversable="true" layoutX="43.0" layoutY="177.0" mnemonicParsing="false" text="RadioButton">
+      <toggleGroup>
+        <ToggleGroup fx:id="test1" />
+      </toggleGroup>
+    </RadioButton>
+    <RadioButton layoutX="43.0" layoutY="202.0" mnemonicParsing="false" text="RadioButton" toggleGroup="$test1" />
+    <RadioButton layoutX="43.0" layoutY="229.0" mnemonicParsing="false" text="RadioButton" toggleGroup="$test1" />
+    <RadioButton layoutX="43.0" layoutY="254.0" mnemonicParsing="false" text="RadioButton" toggleGroup="$test1" />
+    <Button layoutX="43.0" layoutY="433.0" mnemonicParsing="false" onAction="#backClicked" prefHeight="21.0" prefWidth="89.0" text="Back" />
+    <Button layoutX="151.0" layoutY="401.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="89.0" text="Check" />
+    <Button layoutX="151.0" layoutY="433.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="89.0" text="Next" />
+    <Text font="$x1" layoutX="31.0" layoutY="339.0" scaleX="0.8430422725254216" scaleY="1.340694929776141" strokeType="OUTSIDE" strokeWidth="0.0" text="Explanation goes here." />
+    <Text font="$x1" layoutX="39.0" layoutY="303.0" scaleX="0.8430422725254216" scaleY="1.340694929776141" strokeType="OUTSIDE" strokeWidth="0.0" text="Correct." />
+  </children>
+</AnchorPane>

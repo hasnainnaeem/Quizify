@@ -1,0 +1,92 @@
+﻿<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome to documentation of Quizify</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="scribbler-global.css">
+    <link rel="stylesheet" href="scribbler-doc.css">
+    <link rel="author" href="humans.txt">
+  </head>
+  <body>
+    <div class="doc__bg"></div>
+    <nav class="header">
+      <h1 class="logo">Quizify <span class="logo__thin">Documentation</span></h1>
+     
+    </nav>
+    <div class="wrapper">
+      <aside class="doc__nav">
+        <ul>
+          <li class="js-btn selected">Get Started</li>
+          <li class="js-btn">Configuring Tests</li>
+          <li class="js-btn">External Library and Chart Working</li>
+          <li class="js-btn">General Overview</li>
+        </ul>
+      </aside>
+      <article class="doc__content">
+        <section class="js-section">
+          <h3 class="section__title">Get Started</h3>
+          <p>Quizify is an application for entrance test preparation. This documentation is intended to help user to understand the source files of Quizify.</p>
+          <h3 class="section__title">Running Source Files</h3>
+          <div class="code__block code__block--notabs">
+            <pre class="code code--block">
+              <code>
+               1. Import all the Java class files in any Java Compiler.
+	       2. Import provided external libraries in compiler.
+	       3. Place folders named "Files" and "Software Files" in source code (src) folder of your project.
+	       4. Now in classes named : "ImportMCQ", "Test", "Full Test", "TestProgressChart", "AllTestsProgressChart"
+	          replace file paths.DON'T replace full paths, but only until "\\src" folder.
+               5. That's it. Code is ready to compile. 
+              </code>
+            </pre>
+          </div>
+        </section>
+        <section class="js-section">
+          <h3 class="section__title">Adding MCQs and Configuring Tests</h3>
+          <p>Learn how to add more MCQs in chapters of subjects and how to change number of mcqs in a test.</p>
+          <table id="customers">
+          
+            <tr>
+              <td>Add/Remove MCQS</td>
+              <td>In <b>"Files"</b> folder, there are respective folders for each subject. In each folder, there are multiple text files. Each text file name indicates chapter name. To add MCQS, simply write them at the end of the file in a way other MCQS are written. First line is indicates question, next 4 lines are possible options. 5th line is for correct mcq and 6th Line is for explanation.</td>
+              
+            </tr>
+            <tr>
+              <td>Change MCQS per Test</td>
+              <td>In <b>MainMenu</b> class, number of mcqs per test can be changed. For HalfBookTest and FullBookTest, MCQS needed from a single chapter can be modified in methods "takeHalfBookTest" and "TakeFullBookTest". For FullTest, mcqs per book can be changed in method "takeFullTest". Number of mcqs in ChapterWiseTest can not be changed. All mcqs are displayed to user from a single chapter in this test. This is due to the reason that mcqs are randomly picked in other tests, if it was to work in same way, user might miss some mcqs during every test. </td>
+              
+            </tr>
+            <tr>
+              <td>SoftwareFiles Folder</td>
+              <td>This folder is to store software data. Files in this folder basically store data related to performance of user in tests. <b>"TestDetails.txt"</b> file stores marks in last test attempted by user. This is used to generate a pie chart for user. <b>"TestData"</b> folder includes files to store fraction of correct MCQS attempted by user. For example, if user attempted 8 correct mcqs out of 10. This fractional will be 8/10. These fractions are used to generate Pie chart of user's performance in similiar kind of tests.</td>
+          
+            </tr>
+          </table>
+          <p>Efforts were made to make the code as <i>simple</i> and <b>general</b> as possible. Focus was to write <em>reusable</em> code. Aggregate formulas, options in Main Menu are pretty simple to be changed from respective classes.</p>
+          <hr />
+        </section>
+        <section class="js-section">
+          <h3 class="section__title">External Library and Charts Working</h3>
+          <p><b>"JFreeChart"</b> external library is used to generate Pie and Line charts. Libarary files are placed with source files. Working of these charts is made pretty simple. These charts import data from text files and generate charts. </p>
+	  <p>For a single test, Pie chart is generated according to data in <b>"SoftwareFiles/TestDetails.txt"</b> file.</p>
+          <p>For performance tracking of multiple tests, Line chart is used. Which uses data in <b>"SoftwareFiles/TestData"</b> folder.</p>
+        
+          <hr />
+        </section>
+        <section class="js-section">
+          <h3 class="section__title">General Overview of working of Program</h3>
+          <p>There are three main modules in program. Module related to tests works by importing whole data from a specific file(s) depending upon the test type. Then mcqs are one by one presented to user. Before displaying correct MCQ, user's choice input is necessary and correct/wrong mcqs are counted. At the end of the test, number of correct, wrong, total mcqs are is stored in "TestDetails.txt" file. Percentage of correct mcqs is stored in a file in TestData Folder, depending on the test type.</p>
+          <p>Charts are generated on the basis of the stored data. Charts automatically adjust themselves according to the provided data.</p>
+          <p>Working of Aggregate Calculator is made pretty simple by filtering out common functionality and making methods with different formulas for each university.</p>
+        </section>
+      </article>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="scribbler.js"></script>
+  </body>
+</html>

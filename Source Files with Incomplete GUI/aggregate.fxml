@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane3" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="654.0" prefWidth="384.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="guiController">
+  <children>
+    <Button layoutX="135.0" layoutY="481.0" mnemonicParsing="false" onAction="#backClicked" prefHeight="21.0" prefWidth="89.0" text="Back" />
+    <ChoiceBox fx:id="uniChoice" disable="false" layoutX="179.0" layoutY="102.0" prefHeight="21.0" prefWidth="152.0" value="NUST">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="NUST" />
+          <String fx:value="UET" />
+          <String fx:value="FAST" />
+          <String fx:value="COMSATS" />
+        </FXCollections>
+      </items>
+    </ChoiceBox>
+    <ChoiceBox fx:id="acdChoice" layoutX="179.0" layoutY="137.0" prefHeight="21.0" prefWidth="152.0" value="Matric and F.Sc.">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Matric and F.Sc." />
+          <String fx:value="O Level and A Level" />
+          <String fx:value="O Level and F.Sc." />
+          <String fx:value="Matric and A Level" />
+        </FXCollections>
+      </items>
+    </ChoiceBox>
+    <Text layoutX="83.0" layoutY="116.0" scaleX="0.9839400520532043" scaleY="1.3175668033506722" strokeType="OUTSIDE" strokeWidth="0.0" text="University:">
+      <font>
+        <Font name="DejaVu Sans ExtraLight" size="13.0" fx:id="x1" />
+      </font>
+    </Text>
+    <Text font="$x1" layoutX="16.0" layoutY="152.0" scaleX="0.8431621131251417" scaleY="1.340694929776141" strokeType="OUTSIDE" strokeWidth="0.0" text="Academic Background:" />
+    <Text font="$x1" layoutX="22.0" layoutY="219.0" scaleX="0.8430422725254216" scaleY="1.340694929776141" strokeType="OUTSIDE" strokeWidth="0.0" text="F.Sc. (or equivalance): " />
+    <Text font="$x1" layoutX="14.0" layoutY="298.0" scaleX="0.8430422725254216" scaleY="1.340694929776141" strokeType="OUTSIDE" strokeWidth="0.0" text="Matric (or equivalance): " />
+    <Text font="$x1" layoutX="116.0" layoutY="254.0" scaleX="0.8430422725254216" scaleY="1.340694929776141" strokeType="OUTSIDE" strokeWidth="0.0" text="Total: " />
+    <Text font="$x1" layoutX="122.0" layoutY="333.0" scaleX="0.8430422725254216" scaleY="1.340694929776141" strokeType="OUTSIDE" strokeWidth="0.0" text="Total: " />
+    <TextField fx:id="marks" layoutX="179.0" layoutY="204.0" prefWidth="152.0" />
+    <TextField fx:id="marksTotal" layoutX="179.0" layoutY="239.0" prefWidth="152.0" />
+    <TextField fx:id="marks2" layoutX="179.0" layoutY="285.0" prefWidth="152.0" />
+    <TextField fx:id="marks2Total" layoutX="179.0" layoutY="319.0" prefWidth="152.0" />
+    <Text font="$x1" layoutX="90.0" layoutY="386.0" scaleX="0.8430422725254216" scaleY="1.340694929776141" strokeType="OUTSIDE" strokeWidth="0.0" text="Entry test:" />
+    <Text font="$x1" layoutX="116.0" layoutY="421.0" scaleX="0.8430422725254216" scaleY="1.340694929776141" strokeType="OUTSIDE" strokeWidth="0.0" text="Total: " />
+    <TextField fx:id="entry" layoutX="179.0" layoutY="375.0" prefWidth="152.0" />
+    <TextField fx:id="entryTotal" layoutX="179.0" layoutY="408.0" prefWidth="152.0" />
+    <Button layoutX="236.0" layoutY="481.0" mnemonicParsing="false" onAction="#agrCalc" prefHeight="21.0" prefWidth="89.0" text="Calculate" />
+    <Text font="$x1" layoutX="35.0" layoutY="49.0" scaleX="1.3251667231049713" scaleY="1.6608156496172024" strokeType="OUTSIDE" strokeWidth="0.0" text="Quzify 1.0" />
+    <Text fx:id="hid1" font="$x1" layoutX="30.0" layoutY="554.0" scaleX="0.8430422725254216" scaleY="1.340694929776141" strokeType="OUTSIDE" strokeWidth="0.0" text="" />
+    <Text fx:id="hid2" font="$x1" layoutX="130.0" layoutY="554.0" scaleX="0.8430422725254216" scaleY="1.340694929776141" strokeType="OUTSIDE" strokeWidth="0.0" text="" />
+    <Text fx:id="hid3" font="$x1" layoutX="15.0" layoutY="593.0" scaleX="0.8430422725254216" scaleY="1.340694929776141" strokeType="OUTSIDE" strokeWidth="0.0" text="" />
+  </children>
+</AnchorPane>
